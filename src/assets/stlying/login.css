@@ -9,12 +9,13 @@
     height: 100%;
 }
 
-.links li:first-child {
-    background-color: #1570EF;
-    color: #FFFFFF;
+.links ul {
+    flex: 1;
 }
-.links li:last-child,
-.links li:nth-last-child(2) {
-    position: relative;
-    margin-top: auto;
+
+.links ul li:nth-last-child(2){
+    bottom: -450px;
+}
+.links ul li:nth-last-child(1) {
+    bottom: -500px;
 }
