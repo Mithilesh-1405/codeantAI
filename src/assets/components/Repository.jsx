@@ -37,7 +37,7 @@ function Repository() {
                 {isMenuOpen && (
                     <div className="fixed inset-0 bg-[#6C6C6C4D] z-40 xlg:hidden" onClick={handleMenu} />
                 )}
-                <div className={`items-center justify-start ${isMenuOpen ? 'border-[#FFFFFF]' : 'border[#E9EAEB]'} border xlg:h-screen xs:h-auto p-[16px] border-[#E9EAEB] cs:w-[18%] xlg:w-[25%] xlg:flex-col xlg:items-start xlg:pt-[24px] xlg:px-[20px] xlg:pb-[16px] xs:relative`}>
+                <div className="items-center justify-start border xlg:h-screen xs:h-auto p-[16px] border-[#E9EAEB] cs:w-[18%] xlg:w-[25%] xlg:flex xlg:flex-col">
                     <div className='flex items-center justify-start xlg:pb-[20px] xs:pb-0'>
                         <div className='flex items-center gap-[11px]'>
                             <svg width="36" height="41" viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,17 +53,17 @@ function Repository() {
                             <path d="M14.6484 13.1016C15.0703 13.5703 15.0703 14.2734 14.6484 14.6953C14.1797 15.1641 13.4766 15.1641 13.0547 14.6953L7.52344 9.11719L1.94531 14.6953C1.47656 15.1641 0.773438 15.1641 0.351562 14.6953C-0.117188 14.2734 -0.117188 13.5703 0.351562 13.1016L5.92969 7.52344L0.351562 1.94531C-0.117188 1.47656 -0.117188 0.773438 0.351562 0.351562C0.773438 -0.117188 1.47656 -0.117188 1.89844 0.351562L7.52344 5.97656L13.1016 0.398438C13.5234 -0.0703125 14.2266 -0.0703125 14.6484 0.398438C15.1172 0.820312 15.1172 1.52344 14.6484 1.99219L9.07031 7.52344L14.6484 13.1016Z" fill="#181D27" />
                         </svg>}
                     </div>
-                    <div className={`flex flex-col items-center justify-between w-full ${isMenuOpen ? 'block' : 'hidden'} xs:absolute xs:top-[80px] xs:left-0 xs:w-full xs:z-50 xs:shadow-lg xs:px-[16px] xs:bg-white xlg:block xlg:relative xlg:top-0 xlg:left-0 xlg:w-full xlg:z-0 xlg:shadow-none xlg:px-0 xlg:bg-transparent `}>
+                    <div className={`flex flex-col w-full ${isMenuOpen ? 'block' : 'hidden'} xs:absolute xs:top-[80px] xs:left-0 xs:w-full xs:z-50 xs:shadow-lg xs:px-[16px] xs:bg-white xlg:block xlg:relative xlg:top-0 xlg:left-0 xlg:w-full xlg:z-0 xlg:shadow-none xlg:px-0 xlg:bg-transparent xlg:flex-1`}>
                         <div className='flex items-center justify-start gap-[8px] border border-[#D5D7DA] py-[8px] px-[12px] rounded-[8px] xlg:flex mb-[16px] w-full'>
                             <h2>Mithilesh Yadawad</h2>
                             <svg className='ml-auto' width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.7616 1.68173L7.79282 7.40048C7.60532 7.55673 7.41782 7.61923 7.26157 7.61923C7.07407 7.61923 6.88657 7.55673 6.73032 7.43173L0.730318 1.68173C0.417818 1.40048 0.417818 0.900484 0.699068 0.619234C0.980318 0.306734 1.48032 0.306734 1.76157 0.587984L7.26157 5.83798L12.7303 0.587984C13.0116 0.306734 13.5116 0.306734 13.7928 0.619234C14.0741 0.900484 14.0741 1.40048 13.7616 1.68173Z" fill="#181D27" />
                             </svg>
                         </div>
-                        <div className='w-full links'>
-                            <ul className='flex flex-col items-start text-[16px] font-[600] flex-grow'>
+                        <div className='flex-1 links'>
+                            <ul className='flex flex-col items-start justify-start text-[16px] font-[600] h-full'>
                                 {navlink.map((item, index) => (
-                                    <li key={index} className='flex items-start justify-start gap-[8px] px-[14px] py-[10px] rounded-[8px] w-full mb-[4px] hover:cursor-pointer' style={index >= navlink.length - 2 ? { position: 'absolute' } : {}}>
+                                    <li key={index} className='flex items-start justify-start gap-[8px] px-[14px] py-[10px] rounded-[8px] w-full mb-[4px]'>
                                         <svg
                                             xmlns={item.svg.smlns}
                                             width={item.svg.width}
