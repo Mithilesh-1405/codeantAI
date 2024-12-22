@@ -26,7 +26,7 @@ The project is my solution to the **Frontend Developer Intern Hiring Assignment*
    ```
 
 5. View the project:
-   Open `http://localhost:5000` in your preferred browser.
+   Open `http://localhost:5173` in your preferred browser.
 
 ## Technology stack
 - React.js: For building interactive UIs.
