@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate, Router } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function Login() {
     const navigate = useNavigate()
@@ -10,6 +10,7 @@ function Login() {
     const handleDivClick = () => {
         navigate('/repository');
     };
+    const loginLinks = "flex gap-[16px] items-center justify-center w-full mb-[16px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer hover:bg-[#e2edfd]";
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-[#FAFAFA] p-[24px] lg:m-auto max-w-[1000px]">
             <div className="flex flex-col items-center justify-center bg-[#FFFFFF] border-[2px] border-[#E9EAEB] rounded-lg w-full min-h-[600px]">
@@ -23,18 +24,18 @@ function Login() {
                     </div>
                     <h2 className="text-[24px] font-semibold mb-[20px] mt-[24px]">Welcome to CodeAnt AI</h2>
                     <div className="flex text-[20px] bg-btn_bg w-full mb-[36px] justify-center border rounded-[8px] border-[#E9EAEB] font-medium">
-                        <button className={`py-[12px] px-[14px] w-full text-black rounded-[6px] max-w-50 ${tab === 0 ? 'bg-blue-600  text-white' : 'bg-none'}`} onClick={() => handleTab(0)}>SAAS</button>
-                        <button className={`py-[12px] px-[14px] w-full text-black rounded-[6px] max-w-50 ${tab === 1 ? 'bg-blue-600 text-white' : 'bg-none '}`} onClick={() => handleTab(1)}>Self Hosted</button>
+                        <button className={`py-[12px] px-[14px] w-full outline-none border-0 text-black rounded-[6px] max-w-50 ${tab === 0 ? 'bg-blue-600  text-white' : 'bg-none'}`} onClick={() => handleTab(0)}>SAAS</button>
+                        <button className={`py-[12px] px-[14px] w-full outline-none border-0 text-black rounded-[6px] max-w-50 ${tab === 1 ? 'bg-blue-600 text-white' : 'bg-none '}`} onClick={() => handleTab(1)}>Self Hosted</button>
                     </div>
                 </div>
                 <div className="flex flex-col items-center w-full justify-start px-[16px] font-medium text-[16px] min-h-[336px]">
                     {tab === 1 &&
                         <>
-                            <div className="flex gap-[16px] items-center justify-center w-full mt-[24px] mb-[16px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer" onClick={handleDivClick}>
+                            <div className={`${loginLinks} mt-[24px]`} onClick={handleDivClick}>
                                 <svg width="24px" height="24px" viewBox="0 0 256 236" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M128.075 236.075l47.104-144.97H80.97l47.104 144.97z" fill="#E24329" /><path d="M128.075 236.074L80.97 91.104H14.956l113.119 144.97z" fill="#FC6D26" /><path d="M14.956 91.104L.642 135.16a9.752 9.752 0 0 0 3.542 10.903l123.891 90.012-113.12-144.97z" fill="#FCA326" /><path d="M14.956 91.105H80.97L52.601 3.79c-1.46-4.493-7.816-4.492-9.275 0l-28.37 87.315z" fill="#E24329" /><path d="M128.075 236.074l47.104-144.97h66.015l-113.12 144.97z" fill="#FC6D26" /><path d="M241.194 91.104l14.314 44.056a9.752 9.752 0 0 1-3.543 10.903l-123.89 90.012 113.119-144.97z" fill="#FCA326" /><path d="M241.194 91.105h-66.015l28.37-87.315c1.46-4.493 7.816-4.492 9.275 0l28.37 87.315z" fill="#E24329" /></svg>
                                 <h3>Self Hosted Gitlab</h3>
                             </div>
-                            <div className="flex gap-[16px] items-center justify-center w-full mb-[16px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer" onClick={handleDivClick}>
+                            <div className={`${loginLinks}`} onClick={handleDivClick}>
                                 <svg width="24" height="24" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.125 6.125C13.125 5.46094 13.6719 4.875 14.375 4.875C15.0391 4.875 15.625 5.46094 15.625 6.125C15.625 6.82812 15.0391 7.375 14.375 7.375C13.6719 7.375 13.125 6.82812 13.125 6.125ZM13.125 14.25C12.7344 14.25 12.3828 14.25 12.0312 14.1719L10.9375 15.2266C10.7812 15.4219 10.5469 15.5 10.3125 15.5H8.75V17.0625C8.75 17.6094 8.32031 18 7.8125 18H6.25V19.5625C6.25 20.1094 5.82031 20.5 5.3125 20.5H0.9375C0.390625 20.5 0 20.1094 0 19.5625V15.1875C0 14.9531 0.078125 14.7188 0.273438 14.5234L6.32812 8.46875C6.25 8.11719 6.25 7.76562 6.25 7.375C6.25 3.58594 9.29688 0.5 13.125 0.5C16.9141 0.5 20 3.58594 20 7.375C20 11.2031 16.9141 14.25 13.125 14.25ZM13.125 12.375C15.8594 12.375 18.125 10.1484 18.125 7.375C18.125 4.64062 15.8594 2.375 13.125 2.375C10.3516 2.375 8.125 4.64062 8.125 7.375C8.125 7.64844 8.125 7.92188 8.16406 8.19531L8.32031 9.13281L1.83594 15.5781V18.625H4.33594V16.125H6.83594V13.625H9.92188L11.3672 12.1797L12.3047 12.3359C12.5781 12.375 12.8516 12.375 13.125 12.375Z" fill="#171717" />
                                 </svg>
@@ -44,11 +45,11 @@ function Login() {
                     }
                     {tab === 0 &&
                         <>
-                            <div className="flex gap-[16px] items-center justify-center w-full mt-[24px] mb-[16px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer" onClick={handleDivClick}>
+                            <div className={`${loginLinks} mt-[24px]`} onClick={handleDivClick}>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28px" height="28px"><path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z" /></svg>
                                 <h3>Sign in with Github</h3>
                             </div>
-                            <div className="flex gap-[16px] items-center justify-center w-full mb-[16px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer" onClick={handleDivClick}>
+                            <div className={`${loginLinks}`} onClick={handleDivClick}>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     aria-label="Bitbucket" role="img"
                                     width="28" height="28"
@@ -57,11 +58,11 @@ function Login() {
                                         fill="#ffffff" /><path fill="#2684ff" d="M422 130a10 10 0 00-9.9-11.7H100.5a10 10 0 00-10 11.7L136 409a10 10 0 009.9 8.4h221c5 0 9.2-3.5 10 -8.4L422 130zM291 316.8h-69.3l-18.7-98h104.8z" /><path fill="url(#a)" d="M59.632 25.2H40.94l-3.1 18.3h-13v18.9H52c1 0 1.7-.7 1.8-1.6l5.8-35.6z" transform="translate(89.8 85) scale(5.3285)" /></svg>
                                 <h3>Sign in with Bitbucket</h3>
                             </div>
-                            <div className="flex gap-[16px] items-center justify-center w-full mb-[16px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer" onClick={handleDivClick}>
+                            <div className={`${loginLinks}`} onClick={handleDivClick}>
                                 <svg width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="url(#azure-devops-color-16__paint0_linear_707_116)" d="M15 3.622v8.512L11.5 15l-5.425-1.975v1.958L3.004 10.97l8.951.7V4.005L15 3.622zm-2.984.428L6.994 1v2.001L2.382 4.356 1 6.13v4.029l1.978.873V5.869l9.038-1.818z" /><defs><linearGradient id="azure-devops-color-16__paint0_linear_707_116" x1="8" x2="8" y1="14.956" y2="1.026" gradientUnits="userSpaceOnUse"><stop stop-color="#0078D4" /><stop offset=".16" stop-color="#1380DA" /><stop offset=".53" stop-color="#3C91E5" /><stop offset=".82" stop-color="#559CEC" /><stop offset="1" stop-color="#5EA0EF" /></linearGradient></defs></svg>
                                 <h3>Sign in with Azure Devops</h3>
                             </div>
-                            <div className="flex gap-[16px] items-center justify-center w-full mb-[24px] bg-[#FFFFFF] py-[16px] border-[1px] border-[#D8DAE5] rounded-[6px] max-w-[476px] hover:cursor-pointer" onClick={handleDivClick}>
+                            <div className={`${loginLinks}`} onClick={handleDivClick}>
                                 <svg width="24px" height="24px" viewBox="0 0 256 236" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><path d="M128.075 236.075l47.104-144.97H80.97l47.104 144.97z" fill="#E24329" /><path d="M128.075 236.074L80.97 91.104H14.956l113.119 144.97z" fill="#FC6D26" /><path d="M14.956 91.104L.642 135.16a9.752 9.752 0 0 0 3.542 10.903l123.891 90.012-113.12-144.97z" fill="#FCA326" /><path d="M14.956 91.105H80.97L52.601 3.79c-1.46-4.493-7.816-4.492-9.275 0l-28.37 87.315z" fill="#E24329" /><path d="M128.075 236.074l47.104-144.97h66.015l-113.12 144.97z" fill="#FC6D26" /><path d="M241.194 91.104l14.314 44.056a9.752 9.752 0 0 1-3.543 10.903l-123.89 90.012 113.119-144.97z" fill="#FCA326" /><path d="M241.194 91.105h-66.015l28.37-87.315c1.46-4.493 7.816-4.492 9.275 0l28.37 87.315z" fill="#E24329" /></svg>
                                 <h3>Sign in with Gitlab</h3>
                             </div>

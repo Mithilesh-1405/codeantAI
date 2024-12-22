@@ -40,8 +40,8 @@ function LoginScreen() {
                                     <strong className="text-[32px]">500K+</strong>
                                 </div>
                             </div>
-                            <div className="ml-[36px]">
-                                <div className="flex">
+                            <div className="ml-[36px] mt-[6px]">
+                                <div className="flex items-center justify-start">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                                         <path d="M8.83325 10.657L12.8333 6.65698L16.8333 10.657" stroke="#0049C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M12.8333 6.65698L12.8333 16.9861" stroke="#0049C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

@@ -6,16 +6,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - 74px);
+    height: calc(100% - 84px);
 }
 
 .links ul {
     flex: 1;
 }
-.links li:first-child {
-    background-color: #1570EF;
-    color: #FFFFFF;
-}
+
 .links ul li:nth-last-child(2) {
     margin-top: auto;
 }
