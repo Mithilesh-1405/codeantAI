@@ -1,8 +1,36 @@
-# React + Vite
+# CodeAnt AI : Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The project is my solution to the **Frontend Developer Intern Hiring Assignment** by CodeAnt AI.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mithilesh-1405/codeantAI.git
+   cd codeantAI
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the React project:
+   ```bash
+   npm run dev
+   ```
+
+4. Run tailwind:
+   ```bash
+   npm run tailwind
+   ```
+
+5. View the project:
+   Open `http://localhost:5173` in your preferred browser.
+
+## Technology stack
+- React.js: For building interactive UIs.
+- HTML: To structure the web content.
+- CSS: For styling the application.
+- TailwindCSS: For quick and responsive design.
+- Vite: To reduce the build time significantly
