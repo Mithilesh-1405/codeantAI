@@ -1,8 +1,16 @@
-# React + Vite
+# CodeAntAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to setup the project?
 
-Currently, two official plugins are available:
+### Step 1: Clone this repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Step 2: cd into the root directory of this repo, type the following commands
+```
+npm install
+npm run dev
+```
+
+### Step 3: open another terminal and type the following
+
+``` npm run tailwind```
+
