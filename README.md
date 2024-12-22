@@ -1,16 +1,36 @@
-# CodeAntAI
+# CodeAnt AI : Assessment
 
-## How to setup the project?
+The project is my solution to the **Frontend Developer Intern Hiring Assignment** by CodeAnt AI.
 
-### Step 1: Clone this repository
+## Installation
 
-### Step 2: cd into the root directory of this repo, type the following commands
-```
-npm install
-npm run dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mithilesh-1405/codeantAI.git
+   cd codeantAI
+   ```
 
-### Step 3: open another terminal and type the following
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-``` npm run tailwind```
+3. Run the React project:
+   ```bash
+   npm run dev
+   ```
 
+4. Run tailwind:
+   ```bash
+   npm run tailwind
+   ```
+
+5. View the project:
+   Open `http://localhost:5000` in your preferred browser.
+
+## Technology stack
+- React.js: For building interactive UIs.
+- HTML: To structure the web content.
+- CSS: For styling the application.
+- TailwindCSS: For quick and responsive design.
+- Vite: To reduce the build time significantly
